@@ -1,0 +1,13 @@
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Core.dll
+D:\DEV\skinet\Infrastructure\bin\Debug\netcoreapp3.1\Core.pdb
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+D:\DEV\skinet\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
