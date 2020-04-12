@@ -130,5 +130,7 @@ D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\Core.dll
 D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\Infrastructure.dll
 D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\Infrastructure.pdb
 D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\Core.pdb
-D:\DEV\skinet\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache
 D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\DEV\skinet\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache
+D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\DEV\skinet\API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
