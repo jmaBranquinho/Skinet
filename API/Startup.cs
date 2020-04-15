@@ -8,12 +8,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace API
 {
     public class Startup
     {
         private readonly IConfiguration _configuration;
+        private const string CorsPolicyName = "CorsPolicy";
+        private const string DefaultSqlConnection = "DefaultConnection";
 
         public Startup(IConfiguration configuration)
         {
@@ -28,11 +31,19 @@ namespace API
             services.AddControllers();
 
             services.AddDbContext<StoreContext>(x =>
-                x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
+                x.UseSqlite(_configuration.GetConnectionString(DefaultSqlConnection)));
 
             services.AddApplicationServices();
 
             services.AddSwaggerDocumentation();
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy(CorsPolicyName, policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
+                });
+            });
         }
 
 
@@ -48,6 +59,8 @@ namespace API
             app.UseRouting();
 
             app.UseStaticFiles();
+
+            app.UseCors(CorsPolicyName);
 
             app.UseAuthorization();
 
