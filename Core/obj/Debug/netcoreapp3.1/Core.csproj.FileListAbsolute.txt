@@ -1,8 +1,8 @@
 D:\DEV\skinet\Core\bin\Debug\netcoreapp3.1\Core.deps.json
 D:\DEV\skinet\Core\bin\Debug\netcoreapp3.1\Core.dll
 D:\DEV\skinet\Core\bin\Debug\netcoreapp3.1\Core.pdb
-D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
 D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
 D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
 D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.dll
 D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.pdb
+D:\DEV\skinet\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
