@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 using System;
 
 namespace API
@@ -16,7 +17,8 @@ namespace API
     {
         private readonly IConfiguration _configuration;
         private const string CorsPolicyName = "CorsPolicy";
-        private const string DefaultSqlConnection = "DefaultConnection";
+        private const string DefaultSqlConnectionString = "DefaultConnection";
+        private const string RedisConnectionString = "Redis";
 
         public Startup(IConfiguration configuration)
         {
@@ -31,7 +33,14 @@ namespace API
             services.AddControllers();
 
             services.AddDbContext<StoreContext>(x =>
-                x.UseSqlite(_configuration.GetConnectionString(DefaultSqlConnection)));
+                x.UseSqlite(_configuration.GetConnectionString(DefaultSqlConnectionString)));
+
+            services.AddSingleton<IConnectionMultiplexer>(c =>
+            {
+                var configuration = ConfigurationOptions.Parse(_configuration
+                    .GetConnectionString(RedisConnectionString), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
 
             services.AddApplicationServices();
 
