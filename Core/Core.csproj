@@ -8,4 +8,8 @@
     <None Remove="Entities\ProductBrand.cs~RFb2e9672.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.1.3" />
+  </ItemGroup>
+
 </Project>
