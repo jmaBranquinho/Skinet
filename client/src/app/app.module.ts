@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { HomeModule } from './home/home.module';
-import {LoadingInterceptor} from './core/interceptors/loading.intercetor'
+import { LoadingInterceptor } from './core/interceptors/loading.intercetor';
 
 
 @NgModule({
