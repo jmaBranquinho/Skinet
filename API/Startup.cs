@@ -51,7 +51,7 @@ namespace API
 
             services.AddApplicationServices();
 
-            services.AddIdentityServices();
+            services.AddIdentityServices(_configuration);
 
             services.AddSwaggerDocumentation();
 
@@ -79,6 +79,8 @@ namespace API
             app.UseStaticFiles();
 
             app.UseCors(CorsPolicyName);
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
