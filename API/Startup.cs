@@ -3,6 +3,7 @@ using API.Helpers;
 using API.Middleware;
 using AutoMapper;
 using Infrastructure.Data;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ namespace API
     public class Startup
     {
         private readonly IConfiguration _configuration;
+        private const string IdentityConnectionString = "IdentityConnection";
         private const string CorsPolicyName = "CorsPolicy";
         private const string DefaultSqlConnectionString = "DefaultConnection";
         private const string RedisConnectionString = "Redis";
@@ -35,6 +37,11 @@ namespace API
             services.AddDbContext<StoreContext>(x =>
                 x.UseSqlite(_configuration.GetConnectionString(DefaultSqlConnectionString)));
 
+            services.AddDbContext<AppIdentityDbContext>(x =>
+            {
+                x.UseSqlite(_configuration.GetConnectionString(IdentityConnectionString));
+            });
+
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {
                 var configuration = ConfigurationOptions.Parse(_configuration
@@ -43,6 +50,8 @@ namespace API
             });
 
             services.AddApplicationServices();
+
+            services.AddIdentityServices();
 
             services.AddSwaggerDocumentation();
 
